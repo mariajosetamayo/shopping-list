@@ -1,7 +1,5 @@
 $(document).ready(function(){
-	var counter = 0
 	$("#js-shopping-list-form").submit(function(event){
-		// counter++
 		event.preventDefault();
 		if ($("#shopping-list-entry").val() !== "") {
 			$(".shopping-list").append(
@@ -11,26 +9,19 @@ $(document).ready(function(){
 		$(this)[0].reset();
 	});
 
-	
-	// $(".shopping-item-toggle").on("click",
-	// 	function(event){
-	// 		$(".shopping-item").closest(".shopping-item" "li").toggleClass("shopping-item__checked");
-			
-	// });
+// to remove an item
 
 $(".shopping-list").on("click", ".shopping-item-delete",function(){
 	$(this).closest("li").remove();
 });
 
+// to check out an item
+
 $(".shopping-list").on("click", ".shopping-item-toggle",function(){
 	$(this).closest("li").children(".shopping-item").toggleClass("shopping-item__checked");
 });
 
-// $(".shopping-list").on("click", ".")
-
-
 	
-
 	// var hasItBeenClicked = false
 	// $(".shopping-item-delete").on("click", function(event) {
 	// 	hasItBeenClicked = true
@@ -59,16 +50,5 @@ $(".shopping-list").on("click", ".shopping-item-toggle",function(){
 	// 	}
 	// });
 	
-
-
-	// $(".shopping-list").on("click", "li", ".shopping-item-delete",
-	// 	function(event){
-	// 		$(this).remove();
-	// 	});
-
-// $(".shopping-item-delete").on("click", function(event){
-// 	var deleteItem = $(this).closest("li");
-// 	deleteItem.remove();
-// });
 
 });
